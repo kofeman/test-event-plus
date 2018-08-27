@@ -1,9 +1,14 @@
-@import "custom_variables";
 /*
 
 main
 
 */
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
 .header{
 	padding: 13px 0;
@@ -14,14 +19,20 @@ main
 		max-width: 1420px;
 	}
 	
+	.col{
+		flex-grow: 0;
+	}
+	
 	&__toggle{
 		margin-right: 32px;
+		border: none;
 		
 		span{
 			display: block;
 			width: 18px;
-			height: 12px;
+			height: 2px;
 			background-color: #000000;
+			margin-top: 6px;
 			
 			a:hover &{
 				background: #7783a0;
@@ -31,8 +42,8 @@ main
 				background: #0fd4fd;
 			}
 			
-			&+span{
-				margin-top: 6px;
+			&:last-child{
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -42,7 +53,11 @@ main
 	}
 	
 	&__search{
-		flex-grow: 1;
+		
+		&.col{
+			flex-grow: 1;
+		}
+		
 		
 		&-form{
 			width: 100%;
@@ -58,11 +73,13 @@ main
 			color: #000000;
 		}
 	}
+	
+	
 }
 
 .btn{
 	&_header{
-		padding: 14px;
+		//padding: 14px;
 		
 		&+&{
 			margin-left: 9px;
@@ -71,15 +88,18 @@ main
 	
 	&-standart{
 		border: 1px solid #ebeff4;
-		
-		
 	}
 	
 	&_city{
 		white-space: nowrap;
 		width: 150px;
+		flex: 150px 0 0;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		
+		img{
+			margin-right: 13px;
+		}
 	}
 	
 	&-white{
@@ -127,6 +147,9 @@ main
 
 
 .user-info{
+	min-width: 155px;
+	flex: 155px 1 0;
+	
 	&__ava{
 		margin-right: 9px;
 		width: 42px;
@@ -165,6 +188,7 @@ main
 		top: 0;
 		width: 100%;
 		height: 176px;
+		content: '';
 		background-image: linear-gradient(to right, #6d66f5 0%, #00e5fe 100%);
 	}
 	
@@ -187,16 +211,16 @@ main
 	
 	&__label{
 		margin-bottom: 10px;
-		color: $gray;
+		color: #7783a0;
 		display: block;
 	}
 	
-	&__date{
+	&__tags{
 		padding: 15px;
 	}
 	
 	&__textarea{
-		height: 70px;
+		height: 70px !important;
 	}
 	
 	&__date,
@@ -209,7 +233,7 @@ main
 	}
 	
 	&__add-btn{
-		color: $gray;
+		color: #7783a0;
 		display: inline-block;
 		line-height: 24px;
 		margin-bottom: 22px;
@@ -220,11 +244,12 @@ main
 	}
 	
 	&__socials{
+		padding: 0 15px 15px;
 		
 		&-item{
 			margin-right: 20px;
 			width: 25px;
-			height: 17px;
+			height: 25px;
 		}
 		
 		&-link{
@@ -233,62 +258,62 @@ main
 			height: 100%;
 			
 			&_1{
-				background: url("../images/socials/yt.svg") no-repeat;
+				background: url("../images/socials/yt.svg") no-repeat center left / 100%;
 				
 				&:hover{
-					background: url("../images/socials/yt-hover.svg") no-repeat;
+					background: url("../images/socials/yt-hover.svg") no-repeat center left / 100%;
 				}
 				
 				&:active{
-					background: url("../images/socials/yt-act.svg") no-repeat;
+					background: url("../images/socials/yt-act.svg") no-repeat center left / 100%;
 				}
 			}
 			
 			&_2{
-				background: url("../images/socials/v.svg") no-repeat;
+				background: url("../images/socials/v.svg") no-repeat center left / 100%;
 				
 				&:hover{
-					background: url("../images/socials/v-hover.svg") no-repeat;
+					background: url("../images/socials/v-hover.svg") no-repeat center left / 100%;
 				}
 				
 				&:active{
-					background: url("../images/socials/v-act.svg") no-repeat;
+					background: url("../images/socials/v-act.svg") no-repeat center left / 100%;
 				}
 			}
 			
 			&_3{
-				background: url("../images/socials/inst.svg") no-repeat;
+				background: url("../images/socials/inst.svg") no-repeat center left / 100%;
 				
 				&:hover{
-					background: url("../images/socials/inst-hover.svg") no-repeat;
+					background: url("../images/socials/inst-hover.svg") no-repeat center left / 100%;
 				}
 				
 				&:active{
-					background: url("../images/socials/inst-act.svg") no-repeat;
+					background: url("../images/socials/inst-act.svg") no-repeat center left / 100%;
 				}
 			}
 			
 			&_4{
-				background: url("../images/socials/cloud.svg") no-repeat;
+				background: url("../images/socials/cloud.svg") no-repeat center left / 100%;
 				
 				&:hover{
-					background: url("../images/socials/cloud-hover.svg") no-repeat;
+					background: url("../images/socials/cloud-hover.svg") no-repeat center left / 100%;
 				}
 				
 				&:active{
-					background: url("../images/socials/cloud-act.svg") no-repeat;
+					background: url("../images/socials/cloud-act.svg") no-repeat center left / 100%;
 				}
 			}
 			
 			&_5{
-				background: url("../images/socials/house.svg") no-repeat;
+				background: url("../images/socials/house.svg") no-repeat center left / 100%;
 				
 				&:hover{
-					background: url("../images/socials/house-hover.svg") no-repeat;
+					background: url("../images/socials/house-hover.svg") no-repeat center left / 100%;
 				}
 				
 				&:active{
-					background: url("../images/socials/house-act.svg") no-repeat;
+					background: url("../images/socials/house-act.svg") no-repeat center left / 100%;
 				}
 			}
 		}
@@ -298,12 +323,14 @@ main
 .hint{
 	display: block;
 	background: url("../images/i-info.svg") no-repeat;
+	width: 14px;
+	height: 14px;
 }
 
 .dashboard{
 	padding: 18px;
 	position: relative;
-	height: 870px;
+	height: 326px;
 	margin-bottom: 17px;
 	border-radius: 3px;
 	overflow: hidden;
@@ -322,6 +349,10 @@ main
 			height: 100%;
 			object-fit: cover;
 		}
+	}
+	
+	&__content{
+		position: relative;
 	}
 	
 	&__info{
@@ -346,8 +377,25 @@ main
 			}
 		}
 		
-		&__reactions{
+		&-reactions{
 			&-item{
+				margin-right: 17px;
+				
+				&:after{
+					content: '';
+					margin-left: 16px;
+					width: 1px;
+					height: 12px;
+					background-color: #ffffff;
+					opacity: 0.2;
+					display: block;
+					
+				}
+				
+				&:last-of-type:after{
+					display: none;
+				}
+				
 				&-number{
 					margin-right: 5px;
 					color: #ffffff;
@@ -357,15 +405,15 @@ main
 					width: 15px;
 					height: 15px;
 					
-					&_1{
+					&_cal{
 						background: url("../images/i-calendar.svg") no-repeat;
 					}
 					
-					&_2{
+					&_place{
 						background: url("../images/i-place.svg") no-repeat;
 					}
 					
-					&_3{
+					&_like{
 						background: url("../images/i-like.svg") no-repeat;
 					}
 				}
@@ -381,7 +429,7 @@ main
 		margin-right: 36px;
 		position: relative;
 		
-		&__inner{
+		&-inner{
 			width: 94px;
 			height: 94px;
 			border-radius: 5px;
@@ -399,7 +447,7 @@ main
 		margin-top: -21px;
 		border-radius: 50%;
 		
-		background: #fff url('../images/i-mic.svg') no-repeat center;
+		background: #fff url('../images/i-mic-2.png') no-repeat center;
 	}
 }
 
@@ -437,12 +485,12 @@ main
 		
 		&-label{
 			margin-bottom: 10px;
-			color: $gray;
+			color: #7783a0;
 			display: block;
 		}
 		
 		&-textarea{
-			height: 70px;
+			height: 70px !important;
 		}
 	}
 }
@@ -454,6 +502,7 @@ main
 	
 	&__form{
 		padding: 15px 36px;
+		border-bottom: 1px solid #f1f1f1;
 		
 	}
 	
@@ -463,21 +512,24 @@ main
 		font-weight: 700;
 		letter-spacing: 0.14px;
 		margin-right: 70px;
+		line-height: 21px;
 		
 		&:before{
 			display: block;
 			content: '';
 			margin-right: 15px;
 			
-			background: url("../images/i-mic.svg") no-repeat;
-			width: 15px;
-			height: 16px;
+			background: url("../images/i-mic-2.png") no-repeat;
+			width: 19px;
+			height: 21px;
 		}
 	}
 	
 	&__search{
+		flex-grow: 1;
+		
 		&-input{
-			flex-grow: 1;
+			width: 100%;
 		}
 	}
 	
@@ -486,19 +538,22 @@ main
 		width: 18px;
 		height: 11px;
 		margin-left: 25px;
+		flex: 18px 0 0;
 	}
 	
 	&__line{
 		margin-left: 25px;
-		height: 100%;
+		height: 40px;
 		width: 1px;
 		background-color: #f1f1f1;
 		display: block;
 	}
 	
 	&__btn-plus{
-		
+		border: none;
+		background: transparent;
 		margin-left: 13px;
+		padding: 0;
 		
 		&-icon{
 			width: 35px;
@@ -522,6 +577,7 @@ main
 	&__list-item-ava{
 		width: 59px;
 		height: 59px;
+		flex: 59px 0 0;
 		border-radius: 5px;
 		background-color: #e7e7e7;
 		position: relative;
@@ -531,7 +587,7 @@ main
 			width: 27px;
 			height: 27px;
 			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
-			background: #ffffff url("../images/i-mic.svg") no-repeat center;
+			background: #ffffff url("../images/i-sax.svg") no-repeat center;
 			position: absolute;
 			right: -13px;
 			top: 50%;
@@ -541,12 +597,13 @@ main
 		}
 	}
 	
+	
 	&__list-item-info{
 		h3{
 			font-size: 14px;
 			font-weight: 700;
 			letter-spacing: 0.14px;
-			margin-bottom: 9px;
+			margin-bottom: 7px;
 		}
 		
 		p{
@@ -555,7 +612,7 @@ main
 			font-size: 13px;
 			font-weight: 400;
 			letter-spacing: 0.39px;
-			margin-bottom: 12px;
+			margin-bottom: 7px;
 		}
 		
 		a{
