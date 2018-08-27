@@ -1,0 +1,44 @@
+/*
+
+clear 
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+a img {
+  border: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+/*
+
+main
+
+*/
+body {
+  min-width: 320px;
+  background: #ccc;
+}
+.container {
+  margin: 0 auto;
+  width: 1040px;
+  padding: 0 10px;
+}

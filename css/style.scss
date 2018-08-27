@@ -1,0 +1,566 @@
+@import "custom_variables";
+/*
+
+main
+
+*/
+
+.header{
+	padding: 13px 0;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	background-color: #ffffff;
+	
+	&__container{
+		max-width: 1420px;
+	}
+	
+	&__toggle{
+		margin-right: 32px;
+		
+		span{
+			display: block;
+			width: 18px;
+			height: 12px;
+			background-color: #000000;
+			
+			a:hover &{
+				background: #7783a0;
+			}
+			
+			a:active &{
+				background: #0fd4fd;
+			}
+			
+			&+span{
+				margin-top: 6px;
+			}
+		}
+	}
+	
+	&__logo{
+		margin-right: 70px;
+	}
+	
+	&__search{
+		flex-grow: 1;
+		
+		&-form{
+			width: 100%;
+		}
+		
+		&-input{
+			display: block;
+			border: none;
+			border-bottom: 1px solid #141414;
+			padding: 8px 8px 8px 36px;
+			background: #fff url("../images/i-search.svg") no-repeat left center;
+			letter-spacing: 0.14px;
+			color: #000000;
+		}
+	}
+}
+
+.btn{
+	&_header{
+		padding: 14px;
+		
+		&+&{
+			margin-left: 9px;
+		}
+	}
+	
+	&-standart{
+		border: 1px solid #ebeff4;
+		
+		
+	}
+	
+	&_city{
+		white-space: nowrap;
+		width: 150px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	&-white{
+		border: 2px solid #ffffff;
+		background-color: #ffffff;
+		
+		color: #5b7af6;
+		letter-spacing: 0.14px;
+		font-weight: 700;
+		
+		&:hover{
+			opacity: 0.8;
+		}
+		
+		&:active{
+			opacity: 0.5;
+		}
+	}
+	
+	&-white-invert{
+		border: 2px solid #ffffff;
+		color: #ffffff;
+		background: transparent;
+		
+		&:hover{
+			background: #fff;
+			color: #5b7af6;
+		}
+		
+		&:active{
+			opacity: 0.5;
+		}
+	}
+	
+	&-dash{
+		border: 1px dashed #d1d6dc;
+		color: #7783a0;
+		
+		&:hover{
+			border-color: #000;
+			color: #000;
+		}
+	}
+}
+
+
+.user-info{
+	&__ava{
+		margin-right: 9px;
+		width: 42px;
+		height: 42px;
+		
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	
+	&__name{
+		font-size: 13px;
+		letter-spacing: 0.39px;
+		margin-bottom: 6px;
+	}
+	
+	&__exit{
+		font-size: 13px;
+		text-decoration: underline;
+		letter-spacing: 0.39px;
+		
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.main{
+	position: relative;
+	
+	&:before{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 176px;
+		background-image: linear-gradient(to right, #6d66f5 0%, #00e5fe 100%);
+	}
+	
+	&__btns{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+
+.sidebar{
+	border-radius: 3px;
+	background-color: #ffffff;
+	overflow: hidden;
+	
+	&__url{
+		padding: 15px;
+		border-bottom: 1px solid #f1f1f1;
+	}
+	
+	&__label{
+		margin-bottom: 10px;
+		color: $gray;
+		display: block;
+	}
+	
+	&__date{
+		padding: 15px;
+	}
+	
+	&__textarea{
+		height: 70px;
+	}
+	
+	&__date,
+	&__add{
+		padding: 0 15px 15px;
+	}
+	
+	&__add{
+		padding: 0 15px 7px;
+	}
+	
+	&__add-btn{
+		color: $gray;
+		display: inline-block;
+		line-height: 24px;
+		margin-bottom: 22px;
+		
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	
+	&__socials{
+		
+		&-item{
+			margin-right: 20px;
+			width: 25px;
+			height: 17px;
+		}
+		
+		&-link{
+			display: block;
+			width: 100%;
+			height: 100%;
+			
+			&_1{
+				background: url("../images/socials/yt.svg") no-repeat;
+				
+				&:hover{
+					background: url("../images/socials/yt-hover.svg") no-repeat;
+				}
+				
+				&:active{
+					background: url("../images/socials/yt-act.svg") no-repeat;
+				}
+			}
+			
+			&_2{
+				background: url("../images/socials/v.svg") no-repeat;
+				
+				&:hover{
+					background: url("../images/socials/v-hover.svg") no-repeat;
+				}
+				
+				&:active{
+					background: url("../images/socials/v-act.svg") no-repeat;
+				}
+			}
+			
+			&_3{
+				background: url("../images/socials/inst.svg") no-repeat;
+				
+				&:hover{
+					background: url("../images/socials/inst-hover.svg") no-repeat;
+				}
+				
+				&:active{
+					background: url("../images/socials/inst-act.svg") no-repeat;
+				}
+			}
+			
+			&_4{
+				background: url("../images/socials/cloud.svg") no-repeat;
+				
+				&:hover{
+					background: url("../images/socials/cloud-hover.svg") no-repeat;
+				}
+				
+				&:active{
+					background: url("../images/socials/cloud-act.svg") no-repeat;
+				}
+			}
+			
+			&_5{
+				background: url("../images/socials/house.svg") no-repeat;
+				
+				&:hover{
+					background: url("../images/socials/house-hover.svg") no-repeat;
+				}
+				
+				&:active{
+					background: url("../images/socials/house-act.svg") no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.hint{
+	display: block;
+	background: url("../images/i-info.svg") no-repeat;
+}
+
+.dashboard{
+	padding: 18px;
+	position: relative;
+	height: 870px;
+	margin-bottom: 17px;
+	border-radius: 3px;
+	overflow: hidden;
+	
+	&__bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	
+	&__info{
+		padding-top: 105px;
+		
+		&-descr{
+			p{
+				margin-bottom: 15px;
+				text-shadow: 0 0 2px #000000;
+				color: #ffffff;
+				letter-spacing: 0.14px;
+			}
+			
+			h1{
+				margin-bottom: 15px;
+				text-shadow: 0 0 4px #000000;
+				color: #ffffff;
+				text-transform: uppercase;
+				font-size: 24px;
+				font-weight: 700;
+				letter-spacing: 0.24px;
+			}
+		}
+		
+		&__reactions{
+			&-item{
+				&-number{
+					margin-right: 5px;
+					color: #ffffff;
+				}
+				&-icon{
+					display: block;
+					width: 15px;
+					height: 15px;
+					
+					&_1{
+						background: url("../images/i-calendar.svg") no-repeat;
+					}
+					
+					&_2{
+						background: url("../images/i-place.svg") no-repeat;
+					}
+					
+					&_3{
+						background: url("../images/i-like.svg") no-repeat;
+					}
+				}
+			}
+		}
+	}
+	
+	&__img{
+		width: 125px;
+		height: 125px;
+		border-radius: 5px;
+		background-color: #ffffff;
+		margin-right: 36px;
+		position: relative;
+		
+		&__inner{
+			width: 94px;
+			height: 94px;
+			border-radius: 5px;
+			border: 1px dashed #d1d6dc;
+		}
+	}
+	
+	&__mic{
+		width: 42px;
+		height: 42px;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
+		position: absolute;
+		right: -21px;
+		top: 50%;
+		margin-top: -21px;
+		border-radius: 50%;
+		
+		background: #fff url('../images/i-mic.svg') no-repeat center;
+	}
+}
+
+.description{
+	border-radius: 3px;
+	background-color: #ffffff;
+	margin-bottom: 17px;
+	
+	&__nav{
+		padding: 15px;
+		border-bottom: 1px solid #f1f1f1;
+		
+		&-item{
+			margin-right: 30px;
+		}
+		
+		&-link{
+			color: #000000;
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.42px;
+			
+			&:hover{
+				text-decoration: underline;
+			}
+			
+			.active &{
+				color: #21bffb;
+			}
+		}
+	}
+	
+	&__form{
+		padding: 15px;
+		
+		&-label{
+			margin-bottom: 10px;
+			color: $gray;
+			display: block;
+		}
+		
+		&-textarea{
+			height: 70px;
+		}
+	}
+}
+
+.events{
+	border-radius: 3px;
+	background-color: #ffffff;
+	margin-bottom: 100px;
+	
+	&__form{
+		padding: 15px 36px;
+		
+	}
+	
+	&__title{
+		display: flex;
+		flex-direction: row;
+		font-weight: 700;
+		letter-spacing: 0.14px;
+		margin-right: 70px;
+		
+		&:before{
+			display: block;
+			content: '';
+			margin-right: 15px;
+			
+			background: url("../images/i-mic.svg") no-repeat;
+			width: 15px;
+			height: 16px;
+		}
+	}
+	
+	&__search{
+		&-input{
+			flex-grow: 1;
+		}
+	}
+	
+	&__eye{
+		background: url("../images/i-eye.svg") no-repeat;
+		width: 18px;
+		height: 11px;
+		margin-left: 25px;
+	}
+	
+	&__line{
+		margin-left: 25px;
+		height: 100%;
+		width: 1px;
+		background-color: #f1f1f1;
+		display: block;
+	}
+	
+	&__btn-plus{
+		
+		margin-left: 13px;
+		
+		&-icon{
+			width: 35px;
+			height: 35px;
+			border-radius: 5px;
+			background: url("../images/i-plus.svg") no-repeat;
+			display: block;
+		}
+		
+	}
+	
+	&__list{
+		padding: 21px 19px;
+		
+		&-item{
+			padding: 13px 25px;
+			width: 49%;
+		}
+	}
+	
+	&__list-item-ava{
+		width: 59px;
+		height: 59px;
+		border-radius: 5px;
+		background-color: #e7e7e7;
+		position: relative;
+		margin-right: 25px;
+		
+		&-icon{
+			width: 27px;
+			height: 27px;
+			box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
+			background: #ffffff url("../images/i-mic.svg") no-repeat center;
+			position: absolute;
+			right: -13px;
+			top: 50%;
+			margin-top: -13px;
+			border-radius: 50%;
+			display: block;
+		}
+	}
+	
+	&__list-item-info{
+		h3{
+			font-size: 14px;
+			font-weight: 700;
+			letter-spacing: 0.14px;
+			margin-bottom: 9px;
+		}
+		
+		p{
+			color: #a3b0b3;
+			
+			font-size: 13px;
+			font-weight: 400;
+			letter-spacing: 0.39px;
+			margin-bottom: 12px;
+		}
+		
+		a{
+			text-decoration: underline;
+			font-size: 13px;
+		}
+	}
+}

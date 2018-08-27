@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+@@include('blocks/head.html')
+
+<body class="page">
+
+@@include('blocks/header.html')
+
+<main class="main">
+    <div class="container main__btns">
+        <div class="row d-flex justify-content-between">
+            <div class="col">
+                <div class="d-flex flex-row">
+                    <button class="btn btn-white mr-2">
+                        Опубликовать
+                    </button>
+
+                    <button class="btn btn-white-invert mr-2">
+                        Сохранить
+                    </button>
+
+                    <button class="btn btn-white-invert mr-2">
+                        Предпросмотр
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <button class="btn btn-white-invert">
+                    Удалить станицу
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="dashboard">
+                    <div class="dashboard__bg">
+                        <img src="images/screen-1-bg.png" alt="">
+                    </div>
+
+                    <div class="dashboard__content">
+                        <button class="btn btn-dash">
+                            Загрузить фото или видео
+                        </button>
+
+                        <div class="dashboard__info d-flex flex-row align-items-center">
+                            <div class="dashboard__img d-flex align-items-center justify-content-center">
+                                <div class="dashboard__img-inner d-flex align-items-center justify-content-center">
+                                    <img src="images/i-plus.svg" alt="">
+                                </div>
+
+                                <div class="dashboard__mic"></div>
+                            </div>
+
+                            <div class="dashboard__info-descr">
+                                <p>
+                                    Концерт
+                                </p>
+                                <h1>
+                                    Jam Club Jam
+                                </h1>
+                                <ul class="dashboard__info-reactions d-flex flex-row">
+                                    <li class="dashboard__info-reactions-item d-flex flex-row">
+                                        <span class="dashboard__info-reactions-item-number">
+                                            2
+                                        </span>
+                                        <span class="dashboard__info-reactions-item-icon dashboard__info-reactions-item-icon_cal"></span>
+                                    </li>
+                                    <li class="dashboard__info-reactions-item d-flex flex-row">
+                                        <span class="dashboard__info-reactions-item-number">
+                                            0
+                                        </span>
+                                        <span class="dashboard__info-reactions-item-icon dashboard__info-reactions-item-icon_place"></span>
+                                    </li>
+                                    <li class="dashboard__info-reactions-item d-flex flex-row">
+                                        <span class="dashboard__info-reactions-item-number">
+                                            0
+                                        </span>
+                                        <span class="dashboard__info-reactions-item-icon dashboard__info-reactions-item-icon_like"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="description">
+                    <ul class="description__nav d-flex flex-row">
+                        <li class="description__nav-item active">
+                            <a href="#" class="description__nav-link">
+                                Информация
+                            </a>
+                        </li>
+                        <li class="description__nav-item">
+                            <a href="#" class="description__nav-link">
+                                Фото
+                            </a>
+                        </li>
+                        <li class="description__nav-item">
+                            <a href="#" class="description__nav-link">
+                                Видео
+                            </a>
+                        </li>
+                        <li class="description__nav-item">
+                            <a href="#" class="description__nav-link">
+                                Музыка
+                            </a>
+                        </li>
+                        <li class="description__nav-item">
+                            <a href="#" class="description__nav-link">
+                                Котнаткы
+                            </a>
+                        </li>
+                    </ul>
+                    <form action="" class="description__form">
+                        <label for="descr" class="description__form-label d-block">
+                            <span>Описание:</span>
+                        </label>
+
+                        <textarea name="tags" id="descr" class="form-control description__form-textarea"
+                                  placeholder="Добавить описанияе к странице"></textarea>
+                    </form>
+                </div>
+
+                <div class="events">
+                    <form action="#" class="events__form d-flex flex-row align-items-center justify-content-between">
+                        <div class="events__title">
+                            <span>Мероприятие</span>
+                        </div>
+
+                        <div class="events__search d-flex flex-row align-items-center">
+                            <input type="search" class="form-control events__search-input"
+                                   placeholder="Найти мероприятие">
+                            <button class="events__btn-plus">
+                                <span class="events__btn-plus-icon"></span>
+                            </button>
+                            <div class="events__line"></div>
+                            <div class="events__eye"></div>
+                        </div>
+                    </form>
+                    <div class="events__list d-flex flex-row justify-content-between flex-wrap">
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="events__list-item d-flex flex-row align-items-center">
+                            <div class="events__list-item-ava">
+
+                                <span class="events__list-item-ava-icon"></span>
+                            </div>
+
+                            <div class="events__list-item-info">
+                                <h3>
+                                    Купание в звуках Гонга с Алицией и
+                                    Ричардом Эйлякас
+                                </h3>
+
+                                <p>
+                                    c 8.10.17 по 9.10.17
+                                </p>
+
+                                <a href="#">
+                                    Москва, ул. Сретенка, 11
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="sidebar">
+                    <div class="sidebar__url">
+                        <form action="#">
+                            <label for="url" class="sidebar__label d-flex flex-row justify-content-between align-items-center">
+                                <span>Адрес станицы:</span>
+
+                                <span class="hint"></span>
+                            </label>
+                            <input type="text" class="form-control" id="url" placeholder="https://eventplus">
+                        </form>
+                    </div>
+                    <div class="sidebar__tags">
+                        <label for="tags" class="sidebar__label d-block">
+                            <span>Теги:</span>
+                        </label>
+
+                        <textarea name="tags" id="tags" class="form-control sidebar__textarea"
+                                  placeholder="Добавить теги через запятую"></textarea>
+                    </div>
+                    <div class="sidebar__date">
+                        <div class="d-flex flex-row align-items-center">
+                            <input type="date" class="form-control" placeholder="Добавить дату">
+
+                            <a href="#" class="sidebar__link">
+                                + Время
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar__add">
+                        <div>
+                            <a href="#" class="sidebar__add-btn">+ Добавить дату окончания</a>
+                        </div>
+                        <div>
+                            <a href="#" class="sidebar__add-btn">+ Добавить место</a>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar__socials d-flex flex-row">
+                        <li class="sidebar__socials-item sidebar__socials-item_1">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_1"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_2">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_2"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_3">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_3"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_4">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_4"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_5">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_5"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+@@include('blocks/scripts.html')
+
+</body>
+</html>
