@@ -1,9 +1,9 @@
 <header class="header">
     <div class="header__container">
         <div class="container-fluid">
-            <div class="row d-flex align-items-center">
+            <div class="row d-flex align-items-center navbar navbar-expand-md">
                 <div class="header__toggle-nav col">
-                    <button class="header__toggle">
+                    <button class="header__toggle navbar-toggler" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -11,39 +11,43 @@
                 </div>
                 <div class="header__logo col">
                     <a href="/" class="logo">
-                        <img src="/images/logo.png" alt="">
+                        <img src="images/logo.png" alt="">
                     </a>
                 </div>
-                <div class="header__search col">
-                    <form action="#" class="header__search-form">
-                        <input type="search" class="header__search-input w-100" />
-                    </form>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row">
-                        <a href="#" class="btn btn-standart btn_header btn_city d-flex flex-row align-items-center">
-                            <img src="/images/i-belarus.png" class="header__btn-city" alt="">
-                            <span>Минск</span>
-                        </a>
-                        <a href="#" class="btn btn_header d-flex flex-row align-items-center btn btn-standart btn_header ">
-                            <img src="/images/i-letter.svg" alt="">
-                        </a>
-                        <a href="#" class="btn d-flex flex-row align-items-center btn_header btn btn-standart">
-                            <img src="/images/i-edit.svg" alt="">
-                        </a>
+                <div class="navbar-collapse collapse" id="navbar1">
+
+                    <div class="header__search col">
+                        <form action="#" class="header__search-form">
+                            <input type="search" class="header__search-input w-100" />
+                        </form>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row align-items-center user-info">
-                        <div class="user-info__ava">
-                            <img src="/images/ava.png" alt="">
-                        </div>
-                        <div class="user-info__block">
-                            <div class="user-info__name">Эмма Уотсон</div>
-                            <a href="#" class="user-info__exit">Выйти</a>
+                    <div class="col">
+                        <div class="d-flex flex-row header__btns">
+                            <a href="#" class="btn btn-standart btn_header btn_city d-flex flex-row align-items-center">
+                                <img src="/images/i-belarus.png" class="header__btn-city" alt="">
+                                <span>Минск</span>
+                            </a>
+                            <a href="#" class="btn btn_header d-flex flex-row align-items-center btn btn-standart btn_header ">
+                                <img src="images/i-letter.svg" alt="">
+                            </a>
+                            <a href="#" class="btn d-flex flex-row align-items-center btn_header btn btn-standart">
+                                <img src="images/i-edit.svg" alt="">
+                            </a>
                         </div>
                     </div>
+                    <div class="col">
+                        <div class="d-flex flex-row align-items-center user-info">
+                            <div class="user-info__ava">
+                                <img src="images/ava.png" alt="">
+                            </div>
+                            <div class="user-info__block">
+                                <div class="user-info__name">Эмма Уотсон</div>
+                                <a href="#" class="user-info__exit">Выйти</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

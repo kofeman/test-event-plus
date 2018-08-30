@@ -20,9 +20,9 @@
 <header class="header">
     <div class="header__container">
         <div class="container-fluid">
-            <div class="row d-flex align-items-center">
+            <div class="row d-flex align-items-center navbar navbar-expand-md">
                 <div class="header__toggle-nav col">
-                    <button class="header__toggle">
+                    <button class="header__toggle navbar-toggler" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -30,39 +30,43 @@
                 </div>
                 <div class="header__logo col">
                     <a href="/" class="logo">
-                        <img src="/images/logo.png" alt="">
+                        <img src="images/logo.png" alt="">
                     </a>
                 </div>
-                <div class="header__search col">
-                    <form action="#" class="header__search-form">
-                        <input type="search" class="header__search-input w-100" />
-                    </form>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row">
-                        <a href="#" class="btn btn-standart btn_header btn_city d-flex flex-row align-items-center">
-                            <img src="/images/i-belarus.png" class="header__btn-city" alt="">
-                            <span>Минск</span>
-                        </a>
-                        <a href="#" class="btn btn_header d-flex flex-row align-items-center btn btn-standart btn_header ">
-                            <img src="/images/i-letter.svg" alt="">
-                        </a>
-                        <a href="#" class="btn d-flex flex-row align-items-center btn_header btn btn-standart">
-                            <img src="/images/i-edit.svg" alt="">
-                        </a>
+                <div class="navbar-collapse collapse" id="navbar1">
+
+                    <div class="header__search col">
+                        <form action="#" class="header__search-form">
+                            <input type="search" class="header__search-input w-100" />
+                        </form>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row align-items-center user-info">
-                        <div class="user-info__ava">
-                            <img src="/images/ava.png" alt="">
-                        </div>
-                        <div class="user-info__block">
-                            <div class="user-info__name">Эмма Уотсон</div>
-                            <a href="#" class="user-info__exit">Выйти</a>
+                    <div class="col">
+                        <div class="d-flex flex-row header__btns">
+                            <a href="#" class="btn btn-standart btn_header btn_city d-flex flex-row align-items-center">
+                                <img src="/images/i-belarus.png" class="header__btn-city" alt="">
+                                <span>Минск</span>
+                            </a>
+                            <a href="#" class="btn btn_header d-flex flex-row align-items-center btn btn-standart btn_header ">
+                                <img src="images/i-letter.svg" alt="">
+                            </a>
+                            <a href="#" class="btn d-flex flex-row align-items-center btn_header btn btn-standart">
+                                <img src="images/i-edit.svg" alt="">
+                            </a>
                         </div>
                     </div>
+                    <div class="col">
+                        <div class="d-flex flex-row align-items-center user-info">
+                            <div class="user-info__ava">
+                                <img src="images/ava.png" alt="">
+                            </div>
+                            <div class="user-info__block">
+                                <div class="user-info__name">Эмма Уотсон</div>
+                                <a href="#" class="user-info__exit">Выйти</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -72,7 +76,7 @@
     <div class="container main__btns">
         <div class="row d-flex justify-content-between">
             <div class="col">
-                <div class="d-flex flex-row">
+                <div class="d-flex flex-row flex-wrap">
                     <button class="btn btn-white mr-2">
                         Опубликовать
                     </button>
@@ -86,7 +90,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col-3 ml-auto text-right">
+            <div class="col-lg-3 col-xs-12 ml-md-auto ml-sm-0 text-md-right">
                 <button class="btn btn-white-invert">
                     Удалить станицу
                 </button>
@@ -96,7 +100,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-lg-9">
                 <div class="dashboard">
                     <div class="dashboard__bg">
                         <img src="images/screen-1-bg.png" alt="">
@@ -149,7 +153,7 @@
                 </div>
 
                 <div class="description">
-                    <ul class="description__nav d-flex flex-row">
+                    <ul class="description__nav d-flex flex-row flex-wrap">
                         <li class="description__nav-item active">
                             <a href="#" class="description__nav-link">
                                 Информация
@@ -187,7 +191,7 @@
                 </div>
 
                 <div class="events">
-                    <form action="#" class="events__form d-flex flex-row align-items-center justify-content-between">
+                    <form action="#" class="events__form d-flex flex-row align-items-center justify-content-between flex-wrap">
                         <div class="events__title">
                             <span>Мероприятие</span>
                         </div>
@@ -384,7 +388,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-lg-3">
                 <div class="sidebar">
                     <div class="sidebar__url">
                         <form action="#">
