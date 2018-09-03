@@ -87,6 +87,92 @@
                     </div>
                 </div>
 
+                <div class="sidebar d-md-none">
+                    <div class="sidebar__url">
+                        <form action="#">
+                            <label for="url2"
+                                   class="sidebar__label d-flex flex-row justify-content-between align-items-center">
+                                <span>Адрес станицы:</span>
+
+                                <span class="hint"></span>
+                            </label>
+                            <input type="url" class="form-control" id="url2" placeholder="https://eventplus">
+                        </form>
+                    </div>
+                    <div class="sidebar__tags">
+                        <label for="tags" class="sidebar__label d-block">
+                            <span>Теги:</span>
+                        </label>
+
+                        <textarea name="tags" id="tags" class="form-control sidebar__textarea"
+                                  placeholder="Добавить теги через запятую"></textarea>
+                    </div>
+                    <div class="sidebar__date">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <input type="date" class="form-control w-75" placeholder="Добавить дату">
+
+                            <a href="#" class="sidebar__link">
+                                + Время
+                            </a>
+                        </div>
+
+                        <input type="time" class="form-control w-75 form-control_added d-none"
+                               placeholder="Добавить время"
+                               value="09:00">
+
+                    </div>
+                    <div class="sidebar__add">
+                        <div>
+                            <a href="#" class="sidebar__add-btn">+ Добавить дату окончания</a>
+                        </div>
+
+                        <input type="date" class="form-control w-100 form-control_added d-none"
+                               placeholder="Добавить дату окончания">
+
+                        <div>
+                            <a href="#" class="sidebar__add-btn">+ Добавить место</a>
+                        </div>
+
+                    </div>
+
+                    <ul class="sidebar__socials d-flex flex-row">
+                        <li class="sidebar__socials-item sidebar__socials-item_1">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_1"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_2">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_2"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_3">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_3"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_4">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_4"></a>
+                        </li>
+                        <li class="sidebar__socials-item sidebar__socials-item_5">
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_5"></a>
+                        </li>
+                    </ul>
+
+                    <div class="social__inputs d-none">
+                        <input type="url" class="form-control social__input social__input_yt"
+                               placeholder="https://youtube.com/">
+
+                        <input type="url" class="form-control social__input social__input_vk"
+                               placeholder="https://vk.com/">
+
+                        <input type="url" class="form-control social__input social__input_inst"
+                               placeholder="https://instagram.com/">
+
+                        <input type="url" class="form-control social__input social__input_sound"
+                               placeholder="https://soundcloude.com/">
+
+                        <input type="url" class="form-control social__input social__input_home"
+                               placeholder="https://">
+
+                    </div>
+
+                </div>
+
                 <div class="description">
                     <ul class="description__nav d-flex flex-row flex-wrap">
                         <li class="description__nav-item active">
@@ -323,24 +409,25 @@
                 </div>
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-none d-md-block">
                 <div class="sidebar">
                     <div class="sidebar__url">
                         <form action="#">
-                            <label for="url" class="sidebar__label d-flex flex-row justify-content-between align-items-center">
+                            <label for="url1"
+                                   class="sidebar__label d-flex flex-row justify-content-between align-items-center">
                                 <span>Адрес станицы:</span>
 
                                 <span class="hint"></span>
                             </label>
-                            <input type="text" class="form-control" id="url" placeholder="https://eventplus">
+                            <input type="text" class="form-control" id="url1" placeholder="https://eventplus">
                         </form>
                     </div>
                     <div class="sidebar__tags">
-                        <label for="tags" class="sidebar__label d-block">
+                        <label for="tags1" class="sidebar__label d-block">
                             <span>Теги:</span>
                         </label>
 
-                        <textarea name="tags" id="tags" class="form-control sidebar__textarea"
+                        <textarea name="tags" id="tags1" class="form-control sidebar__textarea"
                                   placeholder="Добавить теги через запятую"></textarea>
                     </div>
                     <div class="sidebar__date">
