@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.css"/>
-
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/style.css"/>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -176,63 +176,65 @@
                         <div class="d-flex flex-row align-items-center justify-content-between">
                             <input type="date" class="form-control w-75" placeholder="Добавить дату">
 
-                            <a href="#" class="sidebar__link">
+                            <a href="#" class="sidebar__link js-add-time">
                                 + Время
                             </a>
                         </div>
 
-                        <input type="time" class="form-control w-75 form-control_added d-none"
+                        <input type="time" class="form-control w-75 form-control_added js-time mt-3"
+                               style="display: none"
                                placeholder="Добавить время"
                                value="09:00">
 
                     </div>
                     <div class="sidebar__add">
                         <div>
-                            <a href="#" class="sidebar__add-btn">+ Добавить дату окончания</a>
+                            <a href="#" class="sidebar__add-btn js-add-date">+ Добавить дату окончания</a>
                         </div>
 
-                        <input type="date" class="form-control w-100 form-control_added d-none"
+                        <input type="date" class="form-control w-100 form-control_added mb-3 js-date"
+                               style="display: none"
                                placeholder="Добавить дату окончания">
 
                         <div>
-                            <a href="#" class="sidebar__add-btn">+ Добавить место</a>
+                            <a href="#" class="sidebar__add-btn js-add-place">+ Добавить место</a>
                         </div>
 
                     </div>
 
                     <ul class="sidebar__socials d-flex flex-row">
                         <li class="sidebar__socials-item sidebar__socials-item_1">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_1"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_1 js-add-input-yt"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_2">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_2"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_2 js-add-input-vk"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_3">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_3"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_3 js-add-input-inst"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_4">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_4"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_4 js-add-input-sound"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_5">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_5"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_5 js-add-input-home"></a>
                         </li>
                     </ul>
 
-                    <div class="social__inputs d-none">
+                    <div class="social__inputs">
                         <input type="url" class="form-control social__input social__input_yt"
-                               placeholder="https://youtube.com/">
+                               placeholder="https://youtube.com/" style="display: none">
 
                         <input type="url" class="form-control social__input social__input_vk"
-                               placeholder="https://vk.com/">
+                               placeholder="https://vk.com/" style="display: none">
 
                         <input type="url" class="form-control social__input social__input_inst"
-                               placeholder="https://instagram.com/">
+                               placeholder="https://instagram.com/" style="display: none">
 
                         <input type="url" class="form-control social__input social__input_sound"
-                               placeholder="https://soundcloude.com/">
+                               placeholder="https://soundcloude.com/" style="display: none">
 
                         <input type="url" class="form-control social__input social__input_home"
-                               placeholder="https://">
+                               placeholder="https://" style="display: none">
 
                     </div>
 
@@ -292,7 +294,7 @@
                             <div class="events__eye"></div>
                         </div>
                     </form>
-                    <div class="events__list d-flex flex-row justify-content-between flex-wrap">
+                    <div class="events__list d-flex flex-row justify-content-between flex-wrap" id="sortable">
 
                         <div class="events__list-item d-flex flex-row align-items-center">
                             <div class="events__list-item-ava">
@@ -371,7 +373,6 @@
                                     Купание в звуках Гонга с Алицией и
                                     Ричардом Эйлякас
                                 </h3>
-
                                 <p>
                                     c 8.10.17 по 9.10.17
                                 </p>
@@ -499,37 +500,67 @@
                         <div class="d-flex flex-row align-items-center justify-content-between">
                             <input type="date" class="form-control w-75" placeholder="Добавить дату">
 
-                            <a href="#" class="sidebar__link">
+                            <a href="#" class="sidebar__link js-add-time">
                                 + Время
                             </a>
                         </div>
+
+                        <input type="time" class="form-control w-75 form-control_added mt-3 js-time"
+                               style="display: none"
+                               placeholder="Добавить время"
+                               value="09:00">
+
                     </div>
                     <div class="sidebar__add">
                         <div>
-                            <a href="#" class="sidebar__add-btn">+ Добавить дату окончания</a>
+                            <a href="#" class="sidebar__add-btn js-add-date">+ Добавить дату окончания</a>
                         </div>
+
+                        <input type="date" class="form-control w-100 form-control_added mb-3 js-date"
+                               style="display: none"
+                               placeholder="Добавить дату окончания">
+
                         <div>
-                            <a href="#" class="sidebar__add-btn">+ Добавить место</a>
+                            <a href="#" class="sidebar__add-btn js-add-place">+ Добавить место</a>
                         </div>
+
                     </div>
 
                     <ul class="sidebar__socials d-flex flex-row">
                         <li class="sidebar__socials-item sidebar__socials-item_1">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_1"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_1 js-add-input-yt"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_2">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_2"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_2 js-add-input-vk"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_3">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_3"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_3 js-add-input-inst"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_4">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_4"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_4 js-add-input-sound"></a>
                         </li>
                         <li class="sidebar__socials-item sidebar__socials-item_5">
-                            <a href="#" class="sidebar__socials-link sidebar__socials-link_5"></a>
+                            <a href="#" class="sidebar__socials-link sidebar__socials-link_5 js-add-input-home"></a>
                         </li>
                     </ul>
+
+                    <div class="social__inputs">
+                        <input type="url" class="form-control social__input social__input_yt"
+                               placeholder="https://youtube.com/" style="display: none">
+
+                        <input type="url" class="form-control social__input social__input_vk"
+                               placeholder="https://vk.com/" style="display: none">
+
+                        <input type="url" class="form-control social__input social__input_inst"
+                               placeholder="https://instagram.com/" style="display: none">
+
+                        <input type="url" class="form-control social__input social__input_sound"
+                               placeholder="https://soundcloude.com/" style="display: none">
+
+                        <input type="url" class="form-control social__input social__input_home"
+                               placeholder="https://" style="display: none">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -539,6 +570,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/scripts.js"></script>
 
 </body>

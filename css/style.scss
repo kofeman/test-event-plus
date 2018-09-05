@@ -298,7 +298,7 @@ ul{
 					background: url("../images/socials/yt-hover.svg") no-repeat center left / 100%;
 				}
 				
-				&:active{
+				&.active{
 					background: url("../images/socials/yt-act.svg") no-repeat center left / 100%;
 				}
 			}
@@ -310,7 +310,7 @@ ul{
 					background: url("../images/socials/v-hover.svg") no-repeat center left / 100%;
 				}
 				
-				&:active{
+				&.active{
 					background: url("../images/socials/v-act.svg") no-repeat center left / 100%;
 				}
 			}
@@ -322,7 +322,7 @@ ul{
 					background: url("../images/socials/inst-hover.svg") no-repeat center left / 100%;
 				}
 				
-				&:active{
+				&.active{
 					background: url("../images/socials/inst-act.svg") no-repeat center left / 100%;
 				}
 			}
@@ -334,7 +334,7 @@ ul{
 					background: url("../images/socials/cloud-hover.svg") no-repeat center left / 100%;
 				}
 				
-				&:active{
+				&.active{
 					background: url("../images/socials/cloud-act.svg") no-repeat center left / 100%;
 				}
 			}
@@ -346,7 +346,7 @@ ul{
 					background: url("../images/socials/house-hover.svg") no-repeat center left / 100%;
 				}
 				
-				&:active{
+				&.active{
 					background: url("../images/socials/house-act.svg") no-repeat center left / 100%;
 				}
 			}
@@ -635,6 +635,12 @@ ul{
 		&-item{
 			padding: 13px 25px;
 			width: 49%;
+			cursor: pointer;
+			background: #fff;
+			
+			&:active{
+				box-shadow: 0 6px 16px rgba(37, 32, 57, 0.2);
+			}
 			
 			@media (max-width: 768px){
 				width: 100%;
@@ -650,6 +656,10 @@ ul{
 		background-color: #e7e7e7;
 		position: relative;
 		margin-right: 25px;
+		
+		.events__list-item:active &{
+			background-color: rgba(33, 190, 251, 0.6);
+		}
 		
 		&-icon{
 			width: 27px;
@@ -672,6 +682,10 @@ ul{
 			font-weight: 700;
 			letter-spacing: 0.14px;
 			margin-bottom: 7px;
+			
+			.events__list-item:active &{
+				color: #0fd4fd;
+			}
 		}
 		
 		p{
@@ -681,11 +695,52 @@ ul{
 			font-weight: 400;
 			letter-spacing: 0.39px;
 			margin-bottom: 7px;
+			
+			.events__list-item:active &{
+				color: #0fd4fd;
+			}
 		}
 		
 		a{
 			text-decoration: underline;
 			font-size: 13px;
+			
+			.events__list-item:active &{
+				color: #0fd4fd;
+			}
 		}
+	}
+}
+
+.social__inputs{
+	padding: 0 15px 15px;
+}
+
+.social__input{
+	width: 100%;
+	margin-bottom: 15px;
+	
+	padding-left: 45px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	
+	&_yt{
+		background-image: url("../images/socials/yt.svg");
+	}
+	
+	&_vk{
+		background-image: url("../images/socials/v.svg");
+	}
+	
+	&_inst{
+		background-image: url("../images/socials/inst.svg");
+	}
+	
+	&_sound{
+		background-image: url("../images/socials/cloud.svg");
+	}
+	
+	&_home{
+		background-image: url("../images/socials/house.svg");
 	}
 }
