@@ -221,7 +221,7 @@
 
                         <div class="events__search d-flex flex-row align-items-center">
                             <input type="search" class="form-control events__search-input"
-                                   placeholder="Найти мероприятие">
+                                   placeholder="Найти мероприятие" id="events-search">
                             <button class="events__btn-plus">
                                 <span class="events__btn-plus-icon"></span>
                             </button>
@@ -428,8 +428,16 @@
                             <span>Теги:</span>
                         </label>
 
-                        <textarea name="tags" id="tags1" class="form-control sidebar__textarea"
-                                  placeholder="Добавить теги через запятую"></textarea>
+                        <div class="sidebar__tags-container">
+                            <div class="sidebar__tags-list" >
+
+                            </div>
+
+                            <textarea name="tags" id="tags1" class="form-control sidebar__textarea js-tags"
+                                      placeholder="Добавить теги через запятую"></textarea>
+
+                        </div>
+
                     </div>
                     <div class="sidebar__date">
                         <div class="d-flex flex-row align-items-center justify-content-between">

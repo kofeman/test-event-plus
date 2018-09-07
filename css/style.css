@@ -164,7 +164,28 @@ ul {
   .sidebar__tags {
     padding: 15px; }
   .sidebar__textarea {
-    height: 70px !important; }
+    min-height: 70px !important; }
+  .sidebar__tags-container {
+    position: relative; }
+  .sidebar__tags-list {
+    padding: 10px 0; }
+  .sidebar__tag {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 5px 6px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px; }
+    .sidebar__tag-text {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+      color: #333;
+      font-size: 13px; }
+    .sidebar__tag-del {
+      display: inline-block;
+      vertical-align: middle;
+      color: #000000; }
   .sidebar__date, .sidebar__add {
     padding: 0 15px 15px; }
   .sidebar__add {
@@ -480,3 +501,11 @@ ul {
     background-image: url("../images/socials/cloud.svg"); }
   .social__input_home {
     background-image: url("../images/socials/house.svg"); }
+
+.events__aut {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px !important; }
+  .events__aut span {
+    font-style: normal;
+    color: #000000; }
