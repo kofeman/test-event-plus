@@ -31,7 +31,7 @@ gulp.task('scss', function() {
 });
 
 gulp.task('scss-bootstrap', function() {
-	return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss'])
+	return gulp.src(['scss/bootstrap.scss'])
 		.pipe(sass())
 		.on('error', console.log)
 		.pipe(autoprefixer({
